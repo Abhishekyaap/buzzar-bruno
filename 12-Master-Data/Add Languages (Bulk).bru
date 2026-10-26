@@ -1,0 +1,26 @@
+meta {
+  name: Add Languages (Bulk)
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/language
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "data": [
+    {
+      "name": "English",
+      "slug": "english"
+    },
+    {
+      "name": "Hindi",
+      "slug": "hindi"
+    }
+  ]
+}
+}

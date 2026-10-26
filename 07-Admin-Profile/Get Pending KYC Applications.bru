@@ -1,0 +1,15 @@
+meta {
+  name: Get Pending KYC Applications
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/profile/get-pending-kyc
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

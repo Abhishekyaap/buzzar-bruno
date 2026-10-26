@@ -1,0 +1,32 @@
+meta {
+  name: Get Campaigns (New)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/campaign/get-new
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "categories": [
+    1,
+    2
+  ],
+  "payouts": [
+    "barter",
+    "paid"
+  ],
+  "platforms": [
+    "instagram",
+    "youtube"
+  ]
+}
+}

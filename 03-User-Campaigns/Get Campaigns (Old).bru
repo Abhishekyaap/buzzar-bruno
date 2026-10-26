@@ -1,0 +1,23 @@
+meta {
+  name: Get Campaigns (Old)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/campaign/get
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "categories": [],
+  "payouts": [],
+  "platforms": []
+}
+}

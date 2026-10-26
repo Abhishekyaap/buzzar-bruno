@@ -1,0 +1,26 @@
+meta {
+  name: Enroll Influencer in Campaign
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/external-influencer/:id/enroll
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "campaign_id": 1,
+  "status": "approved"
+}
+}

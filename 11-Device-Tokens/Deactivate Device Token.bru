@@ -1,0 +1,15 @@
+meta {
+  name: Deactivate Device Token
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/device-tokens/:id/deactivate
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 1
+}

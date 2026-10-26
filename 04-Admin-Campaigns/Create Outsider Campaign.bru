@@ -1,0 +1,22 @@
+meta {
+  name: Create Outsider Campaign
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/campaign/outsider
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "title": "External Brand Outreach",
+  "description": "Outreach campaign for non-platform creators"
+}
+}

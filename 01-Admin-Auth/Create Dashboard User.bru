@@ -1,0 +1,24 @@
+meta {
+  name: Create Dashboard User
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/auth-admin/users
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "name": "Editor User",
+  "email": "editor@buzzar.co",
+  "password": "Password123",
+  "role": "EDITOR"
+}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Search Social Account
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/social/search
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "platform": "instagram",
+  "handle": "buzzar_creator"
+}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get Dashboard User by ID
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/auth-admin/users/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

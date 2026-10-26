@@ -1,0 +1,25 @@
+meta {
+  name: Update App Version Info
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/app/version/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 1
+}
+
+body:json {
+{
+  "current_version": "1.0.2",
+  "minimum_version": "1.0.0",
+  "force_update": false,
+  "update_url": "https://play.google.com/store/apps/details?id=com.buzzar",
+  "release_notes": "Bug fixes and performance improvements."
+}
+}

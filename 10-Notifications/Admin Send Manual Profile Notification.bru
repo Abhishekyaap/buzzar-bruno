@@ -1,0 +1,28 @@
+meta {
+  name: Admin Send Manual Profile Notification
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/profile-notifications/send-manual
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "userIds": [
+    1,
+    2
+  ],
+  "isBroadcast": false,
+  "title": "Complete Your KYC",
+  "description": "Please submit your PAN details to receive payments.",
+  "screenName": "profile/kyc"
+}
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Add or Edit Shipping Address
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/profile/shipping-address
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "address1": "Flat 402, Sunshine Heights",
+  "address2": "Linking Road, Bandra West",
+  "city": 1,
+  "pincode": "400050",
+  "address_type": "Home",
+  "is_default": true,
+  "contact_name": "Aarav Sharma",
+  "contact_number": "9876543210"
+}
+}

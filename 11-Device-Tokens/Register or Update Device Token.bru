@@ -1,0 +1,22 @@
+meta {
+  name: Register or Update Device Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/device-tokens
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "token": "ExponentPushToken[xxxxxxxxxxxxxxxxxxxxxx]",
+  "platform": "android"
+}
+}

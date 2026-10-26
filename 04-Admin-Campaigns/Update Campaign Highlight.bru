@@ -1,0 +1,25 @@
+meta {
+  name: Update Campaign Highlight
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{baseUrl}}/campaign/highlight/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "is_highlight": true
+}
+}

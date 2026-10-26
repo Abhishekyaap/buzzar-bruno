@@ -1,0 +1,30 @@
+meta {
+  name: Add Cities (Bulk)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/city/add-city
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Mumbai",
+      "slug": "mumbai",
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "name": "Delhi NCR",
+      "slug": "delhi-ncr",
+      "country": "India"
+    }
+  ]
+}
+}

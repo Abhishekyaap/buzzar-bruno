@@ -1,0 +1,25 @@
+meta {
+  name: Add Bank Payment Method
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/profile/payment-method
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "method": "bank",
+  "account_name": "Aarav Sharma",
+  "account_number": "123456789012",
+  "account_ifsc": "HDFC0001234",
+  "is_default": true
+}
+}

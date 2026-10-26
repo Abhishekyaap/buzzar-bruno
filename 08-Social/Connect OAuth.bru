@@ -1,0 +1,23 @@
+meta {
+  name: Connect OAuth
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/social/connect-oauth
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "platform": "instagram",
+  "code": "OAUTH_CODE",
+  "redirectUri": "https://buzzar.co/instagram/callback"
+}
+}

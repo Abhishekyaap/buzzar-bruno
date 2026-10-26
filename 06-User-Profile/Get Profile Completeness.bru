@@ -1,0 +1,15 @@
+meta {
+  name: Get Profile Completeness
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/profile/profile-complete
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

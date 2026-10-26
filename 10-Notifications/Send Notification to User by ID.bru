@@ -1,0 +1,23 @@
+meta {
+  name: Send Notification to User by ID
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/notifications/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 1
+}
+
+body:json {
+{
+  "title": "Application Update",
+  "description": "Your application for the campaign was approved!",
+  "screenName": "campaign/details"
+}
+}

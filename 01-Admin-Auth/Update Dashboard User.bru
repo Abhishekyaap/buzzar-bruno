@@ -1,0 +1,26 @@
+meta {
+  name: Update Dashboard User
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/auth-admin/users/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "name": "Updated Admin Name",
+  "role": "ADMIN"
+}
+}

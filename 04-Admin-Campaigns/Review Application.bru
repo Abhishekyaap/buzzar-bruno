@@ -1,0 +1,26 @@
+meta {
+  name: Review Application
+  type: http
+  seq: 15
+}
+
+put {
+  url: {{baseUrl}}/campaign/review/application/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "status": "approved",
+  "feedback": "Influencer approved for campaign"
+}
+}

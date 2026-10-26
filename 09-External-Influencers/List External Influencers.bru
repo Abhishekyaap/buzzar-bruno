@@ -1,0 +1,25 @@
+meta {
+  name: List External Influencers
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/external-influencer?page=1&limit=20
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 20
+  ~search: Priya
+  ~source: manual
+  ~status: active
+  ~campaign_id: 1
+  ~content_category: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

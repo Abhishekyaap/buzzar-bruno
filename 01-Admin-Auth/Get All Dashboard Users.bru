@@ -1,0 +1,15 @@
+meta {
+  name: Get All Dashboard Users
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/auth-admin/users
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

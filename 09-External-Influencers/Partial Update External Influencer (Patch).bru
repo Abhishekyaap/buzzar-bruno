@@ -1,0 +1,26 @@
+meta {
+  name: Partial Update External Influencer (Patch)
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/external-influencer/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "followers": 40000,
+  "phone": "9876543211"
+}
+}

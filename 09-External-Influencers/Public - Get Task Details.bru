@@ -1,0 +1,16 @@
+meta {
+  name: Public - Get Task Details
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/public/external-influencer/campaigns/:campaignId/tasks/:taskId
+  body: none
+  auth: none
+}
+
+params:path {
+  campaignId: 1
+  taskId: 1
+}

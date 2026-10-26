@@ -1,0 +1,19 @@
+meta {
+  name: Toggle Campaign Active Status
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{baseUrl}}/campaign/active/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

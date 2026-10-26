@@ -1,0 +1,20 @@
+meta {
+  name: Revert Rejected Applicant
+  type: http
+  seq: 19
+}
+
+patch {
+  url: {{baseUrl}}/campaign/:campaignId/applicant/:userId/revert
+  body: none
+  auth: bearer
+}
+
+params:path {
+  campaignId: 1
+  userId: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

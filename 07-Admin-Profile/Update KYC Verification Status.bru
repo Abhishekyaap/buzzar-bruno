@@ -1,0 +1,23 @@
+meta {
+  name: Update KYC Verification Status
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/profile/kyc-status
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "userId": 1,
+  "status": "approved",
+  "rejectionReason": ""
+}
+}

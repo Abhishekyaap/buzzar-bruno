@@ -1,0 +1,19 @@
+meta {
+  name: Import External Influencers (Excel)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/external-influencer/import
+  body: multipart-form
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:multipart-form {
+  file: @file()
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Set Default Bank
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/profile/bank-default
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "bank_id": 1
+}
+}

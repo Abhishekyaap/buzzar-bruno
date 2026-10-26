@@ -1,0 +1,26 @@
+meta {
+  name: Add Skills (Bulk)
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/skills
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "data": [
+    {
+      "name": "Reel Creation",
+      "slug": "reel-creation"
+    },
+    {
+      "name": "Photography",
+      "slug": "photography"
+    }
+  ]
+}
+}

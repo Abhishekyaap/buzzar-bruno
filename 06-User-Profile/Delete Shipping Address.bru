@@ -1,0 +1,21 @@
+meta {
+  name: Delete Shipping Address
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/profile/delete-address
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "address_id": 1
+}
+}

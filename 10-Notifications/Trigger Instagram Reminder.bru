@@ -1,0 +1,17 @@
+meta {
+  name: Trigger Instagram Reminder
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/notifications/trigger-instagram-reminder
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "phone": "9876543210"
+}
+}

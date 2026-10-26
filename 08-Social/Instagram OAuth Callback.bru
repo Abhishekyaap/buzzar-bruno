@@ -1,0 +1,17 @@
+meta {
+  name: Instagram OAuth Callback
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/social/instagram/callback?code=AUTH_CODE&state=1
+  body: none
+  auth: none
+}
+
+params:query {
+  code: AUTH_CODE
+  state: 1
+  ~error: 
+}

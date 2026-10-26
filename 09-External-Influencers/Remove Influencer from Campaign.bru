@@ -1,0 +1,20 @@
+meta {
+  name: Remove Influencer from Campaign
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{baseUrl}}/external-influencer/:id/campaign/:campaignId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+  campaignId: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get External Influencer Campaign Details
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/campaign/external/:externalId/campaigns/:campaignId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  externalId: 1
+  campaignId: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

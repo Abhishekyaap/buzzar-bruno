@@ -1,0 +1,23 @@
+meta {
+  name: Review External Influencer Application
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{baseUrl}}/external-influencer/review/application
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "registration_id": 1,
+  "approved": true,
+  "feedback": "Campaign criteria matched"
+}
+}

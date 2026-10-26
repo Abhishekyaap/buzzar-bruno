@@ -1,0 +1,26 @@
+meta {
+  name: Update Campaign Details
+  type: http
+  seq: 12
+}
+
+patch {
+  url: {{baseUrl}}/campaign/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "title": "Updated Campaign Title",
+  "description": "Updated Campaign Description"
+}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Delete User Notification
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/notifications/:id/delete
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

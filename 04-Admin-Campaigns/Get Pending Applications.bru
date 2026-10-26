@@ -1,0 +1,15 @@
+meta {
+  name: Get Pending Applications
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/campaign/pending
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

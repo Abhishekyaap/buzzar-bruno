@@ -1,0 +1,20 @@
+meta {
+  name: Get Influencer Tasks for Campaign
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/external-influencer/:id/tasks/:campaignId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+  campaignId: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

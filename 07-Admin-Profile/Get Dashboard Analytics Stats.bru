@@ -1,0 +1,20 @@
+meta {
+  name: Get Dashboard Analytics Stats
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/profile/dashboard-stats?startDate=2026-01-01&endDate=2026-12-31
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~startDate: 2026-01-01
+  ~endDate: 2026-12-31
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

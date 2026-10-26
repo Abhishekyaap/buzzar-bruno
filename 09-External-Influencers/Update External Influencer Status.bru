@@ -1,0 +1,25 @@
+meta {
+  name: Update External Influencer Status
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/external-influencer/:id/status
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "status": "active"
+}
+}

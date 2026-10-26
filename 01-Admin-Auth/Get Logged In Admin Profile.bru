@@ -1,0 +1,15 @@
+meta {
+  name: Get Logged In Admin Profile
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/auth-admin/profile
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

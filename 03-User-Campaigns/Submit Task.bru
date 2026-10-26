@@ -1,0 +1,25 @@
+meta {
+  name: Submit Task
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/campaign/tasks/:taskId/submit
+  body: multipart-form
+  auth: bearer
+}
+
+params:path {
+  taskId: 1
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:multipart-form {
+  content: Here is the draft reel and captions for review
+  link: https://instagram.com/reel/example123
+  files: @file()
+}

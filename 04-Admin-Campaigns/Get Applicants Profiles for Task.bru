@@ -1,0 +1,20 @@
+meta {
+  name: Get Applicants Profiles for Task
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/campaign/:id/task/:sequence/applicants-profiles
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+  sequence: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

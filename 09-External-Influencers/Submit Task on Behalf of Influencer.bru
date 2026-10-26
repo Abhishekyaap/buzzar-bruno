@@ -1,0 +1,29 @@
+meta {
+  name: Submit Task on Behalf of Influencer
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/external-influencer/:id/submit-task
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "campaign_id": 1,
+  "task_id": 1,
+  "drive_link": "https://drive.google.com/drive/folders/sample",
+  "content": "Video submitted via Google Drive link",
+  "admin_notes": "Verified by team"
+}
+}

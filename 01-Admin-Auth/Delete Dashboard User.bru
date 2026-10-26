@@ -1,0 +1,19 @@
+meta {
+  name: Delete Dashboard User
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{baseUrl}}/auth-admin/users/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Broadcast Notification to All Users
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/notifications/broadcast
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "title": "🔥 New Campaign Live!",
+  "description": "Apply now to collaborate with top brands on Buzzar.",
+  "screenName": "campaign/list",
+  "type": "campaign_announcement"
+}
+}

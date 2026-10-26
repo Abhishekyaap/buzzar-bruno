@@ -1,0 +1,19 @@
+meta {
+  name: Process Submission Payment
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{baseUrl}}/campaign/submissions/:submissionId/process-payment
+  body: none
+  auth: bearer
+}
+
+params:path {
+  submissionId: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

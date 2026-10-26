@@ -1,0 +1,24 @@
+meta {
+  name: Public - Submit Task
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/public/external-influencer/campaigns/:campaignId/tasks/:taskId/submit
+  body: json
+  auth: none
+}
+
+params:path {
+  campaignId: 1
+  taskId: 1
+}
+
+body:json {
+{
+  "phone": "9876543211",
+  "drive_link": "https://drive.google.com/drive/folders/sample",
+  "content": "Task content submitted via creator public link"
+}
+}

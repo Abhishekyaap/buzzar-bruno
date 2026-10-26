@@ -1,0 +1,26 @@
+meta {
+  name: Review Task Submission
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{baseUrl}}/campaign/submissions/:id/review
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "status": "approved",
+  "feedback": "Video looks great and meets all criteria."
+}
+}

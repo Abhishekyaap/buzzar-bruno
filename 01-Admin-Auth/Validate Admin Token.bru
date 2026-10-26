@@ -1,0 +1,15 @@
+meta {
+  name: Validate Admin Token
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/auth-admin/validate-token
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

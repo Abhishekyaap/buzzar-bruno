@@ -1,0 +1,27 @@
+meta {
+  name: Full Update External Influencer (Put)
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/external-influencer/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "name": "Priya Verma",
+  "instagram_url": "https://instagram.com/priya_v_official",
+  "followers": 45000
+}
+}

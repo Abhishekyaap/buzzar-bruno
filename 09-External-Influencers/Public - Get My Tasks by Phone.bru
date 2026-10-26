@@ -1,0 +1,19 @@
+meta {
+  name: Public - Get My Tasks by Phone
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/public/external-influencer/campaigns/:campaignId/my-tasks?phone=9876543211
+  body: none
+  auth: none
+}
+
+params:query {
+  phone: 9876543211
+}
+
+params:path {
+  campaignId: 1
+}

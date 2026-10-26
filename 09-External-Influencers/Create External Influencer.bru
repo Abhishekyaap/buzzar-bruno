@@ -1,0 +1,37 @@
+meta {
+  name: Create External Influencer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/external-influencer
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "name": "Priya Verma",
+  "instagram_url": "https://instagram.com/priya_v",
+  "youtube_url": "https://youtube.com/@priya_v",
+  "followers": 35000,
+  "platform": "instagram",
+  "phone": "9876543211",
+  "email": "priya@example.com",
+  "address": "B-12, Green Park",
+  "city_name": "Delhi",
+  "pincode": "110016",
+  "source": "manual",
+  "content_category": [
+    1,
+    2
+  ],
+  "status": "active",
+  "campaign_id": 1
+}
+}

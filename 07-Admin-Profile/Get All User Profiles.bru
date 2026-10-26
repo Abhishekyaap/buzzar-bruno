@@ -1,0 +1,28 @@
+meta {
+  name: Get All User Profiles
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/profile/profile-data?page=1&limit=20
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 20
+  ~search: 
+  ~minFollowers: 1000
+  ~maxFollowers: 100000
+  ~platform: instagram
+  ~kycStatus: 1
+  ~hasPayment: true
+  ~contentCategory: 1,2
+  ~city: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}

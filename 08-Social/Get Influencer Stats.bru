@@ -1,0 +1,21 @@
+meta {
+  name: Get Influencer Stats
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/social/stats
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "username": "buzzar_creator"
+}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Confirm Instagram Account
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/social/instagram/confirm
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "code": "INSTAGRAM_AUTH_CODE",
+  "platform": "instagram"
+}
+}

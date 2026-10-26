@@ -1,0 +1,23 @@
+meta {
+  name: Review External Influencer Task Submission
+  type: http
+  seq: 14
+}
+
+put {
+  url: {{baseUrl}}/external-influencer/review/task
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "submission_id": 1,
+  "approved": true,
+  "feedback": "Task submission verified"
+}
+}

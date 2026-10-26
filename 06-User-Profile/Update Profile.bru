@@ -1,0 +1,23 @@
+meta {
+  name: Update Profile
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/profile/update-profile
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "first_name": "Aarav",
+  "last_name": "Sharma",
+  "email": "aarav.sharma@example.com"
+}
+}

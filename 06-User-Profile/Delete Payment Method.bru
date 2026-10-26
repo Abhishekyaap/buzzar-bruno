@@ -1,0 +1,21 @@
+meta {
+  name: Delete Payment Method
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/profile/delete-payment-method
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "bank_id": 1
+}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: List Device Tokens by User ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/device-tokens?user_id=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  user_id: 1
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

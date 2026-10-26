@@ -1,0 +1,26 @@
+meta {
+  name: Admin Save Social Account Data
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/social/admin/save
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "userId": 1,
+  "platform": "instagram",
+  "handle": "creator_username",
+  "title": "Aarav Lifestyle",
+  "followers": 25000,
+  "status": "approved"
+}
+}

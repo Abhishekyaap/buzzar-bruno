@@ -1,0 +1,21 @@
+meta {
+  name: Set Default Shipping Address
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/profile/shipping-address-default
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "address_id": 1
+}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Apply to Campaign
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/campaign/apply
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "campaign_id": 1
+}
+}

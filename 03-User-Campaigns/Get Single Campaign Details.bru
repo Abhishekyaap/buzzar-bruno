@@ -1,0 +1,19 @@
+meta {
+  name: Get Single Campaign Details
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/campaign/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

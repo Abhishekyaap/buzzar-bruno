@@ -1,0 +1,15 @@
+meta {
+  name: Get Campaign Deeplink
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/campaign/deeplink/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 1
+}

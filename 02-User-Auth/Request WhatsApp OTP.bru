@@ -1,0 +1,18 @@
+meta {
+  name: Request WhatsApp OTP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "phone": "9876543210",
+  "cc": "+91"
+}
+}

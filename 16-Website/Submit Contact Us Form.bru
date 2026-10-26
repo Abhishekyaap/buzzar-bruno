@@ -1,0 +1,22 @@
+meta {
+  name: Submit Contact Us Form
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/website/contact
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "firstName": "Karan",
+  "lastName": "Kapoor",
+  "email": "karan@brand.com",
+  "cc": "+91",
+  "phone": "9876543210",
+  "message": "We are interested in running brand campaigns with your creators."
+}
+}

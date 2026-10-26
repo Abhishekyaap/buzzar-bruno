@@ -1,0 +1,26 @@
+meta {
+  name: Create Profile (Step 1)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/profile
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "step": 1,
+  "first_name": "Aarav",
+  "last_name": "Sharma",
+  "email": "aarav.sharma@example.com",
+  "age": 24,
+  "gender": "Male"
+}
+}

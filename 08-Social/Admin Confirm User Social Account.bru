@@ -1,0 +1,24 @@
+meta {
+  name: Admin Confirm User Social Account
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/social/admin/confirm
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "userId": 1,
+  "handle": "creator_username",
+  "platform": "instagram",
+  "code": "optional_code"
+}
+}

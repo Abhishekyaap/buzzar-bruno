@@ -1,0 +1,25 @@
+meta {
+  name: Submit KYC Details
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/profile/kyc
+  body: multipart-form
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:multipart-form {
+  pan: ABCDE1234F
+  isMSME: false
+  address1: Flat 402, Sunshine Heights
+  address2: Bandra West
+  city: 1
+  pincode: 400050
+  msme_certificate: @file()
+}

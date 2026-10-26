@@ -1,0 +1,21 @@
+meta {
+  name: Create Campaign with Tasks
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/campaign
+  body: multipart-form
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:multipart-form {
+  createDto: {"title":"Summer Wellness Campaign","description":"Promoting healthy lifestyle and wellness products.","short_description":"Summer recovery hamper campaign","campaign_type":"barter","selection_type":"manual","start_date":"2026-06-01","end_date":"2026-07-01","platforms":["instagram"],"company_name":"Wellness Corp","company_description":"Premium fitness products","company_website":"https://wellnesscorp.com","terms_and_conditions":"Must post reel within 7 days of receiving hamper.","deliverables":"1 Reel + 1 Story","is_active":true,"is_highlight":false,"content_categories":[1,2],"city_ids":[1],"tasks":[{"type":"Reel Submission","description":"Upload reel draft","is_upload":true,"is_link":false,"sequence":1,"due_date":"2026-06-15"}]}
+  campaignImage: @file()
+  companyLogo: @file()
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Add Content Categories (Bulk)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/content-category
+  body: json
+  auth: none
+}
+
+body:json {
+{
+  "data": [
+    {
+      "name": "Fashion & Style",
+      "slug": "fashion-style",
+      "image": "https://buzzar.co/categories/fashion.png"
+    },
+    {
+      "name": "Fitness & Health",
+      "slug": "fitness-health",
+      "image": "https://buzzar.co/categories/fitness.png"
+    }
+  ]
+}
+}

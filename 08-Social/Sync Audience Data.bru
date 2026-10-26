@@ -1,0 +1,21 @@
+meta {
+  name: Sync Audience Data
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/social/sync-audience
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+{
+  "username": "buzzar_creator"
+}
+}

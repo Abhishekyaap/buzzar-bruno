@@ -1,0 +1,25 @@
+meta {
+  name: Update Campaign Status
+  type: http
+  seq: 11
+}
+
+patch {
+  url: {{baseUrl}}/campaign/status/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{adminToken}}
+}
+
+body:json {
+{
+  "status": "active"
+}
+}

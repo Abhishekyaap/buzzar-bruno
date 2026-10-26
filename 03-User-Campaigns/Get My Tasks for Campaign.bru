@@ -1,0 +1,19 @@
+meta {
+  name: Get My Tasks for Campaign
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/campaign/:campaignId/my-tasks
+  body: none
+  auth: bearer
+}
+
+params:path {
+  campaignId: 1
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

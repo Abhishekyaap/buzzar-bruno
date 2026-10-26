@@ -1,0 +1,15 @@
+meta {
+  name: Get KYC Details
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/profile/kyc
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}

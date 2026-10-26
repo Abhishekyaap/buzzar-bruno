@@ -1,0 +1,19 @@
+meta {
+  name: Send Bulk Campaign Outreach via CSV
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/whatsapp/send-campaign-csv
+  body: multipart-form
+  auth: none
+}
+
+body:multipart-form {
+  file: @file()
+  dryRun: true
+  templateName: new_campaign
+  limit: 10
+  languageCode: en_US
+}

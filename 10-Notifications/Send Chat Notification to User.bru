@@ -1,0 +1,23 @@
+meta {
+  name: Send Chat Notification to User
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/notifications/chat/:userId
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 1
+}
+
+body:json {
+{
+  "title": "New Chat Message",
+  "description": "You have received a new update from campaign manager.",
+  "screenName": "chat/conversation"
+}
+}
